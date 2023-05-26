@@ -1,19 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Bellefair&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Bellefair&display=swap');
 
 @layer base {
+  html {
+    @apply font-barlow text-white;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    @apply uppercase;
+  }
+
   h1,
   h2,
   h3,
   h4 {
-    @apply font-bellefair;
+    @apply font-bellefair text-white;
+  }
+  h5 {
+    @apply font-barlow text-lightBlue;
   }
 
-  h5,
   body {
-    @apply font-barlow;
+    @apply font-barlow text-lightBlue;
   }
 
   h1 {
@@ -35,12 +49,12 @@
 
 @layer components {
   .sub-heading-1 {
-    @apply font-bellefair text-28;
+    @apply font-bellefair text-28 uppercase;
   }
   .sub-heading-2 {
-    @apply font-barlow text-14 tracking-2.35;
+    @apply font-barlow text-14 tracking-2.35 uppercase;
   }
   .nav-text {
-    @apply font-barlow text-16 tracking-2.7;
+    @apply font-barlow text-16 tracking-2.7 uppercase;
   }
 }

@@ -1,10 +1,9 @@
-import { Link } from 'react-router-dom';
+import Header from '../components/Header';
 
 function Destination() {
   return (
-    <div>
-      <h1>Destination</h1>
-      <Link to='/'>Home</Link>
+    <div className='h-screen bg-cover bg-destinationMobile md:bg-destinationTablet lg:bg-destinationDesktop'>
+      <Header />
     </div>
   );
 }

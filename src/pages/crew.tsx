@@ -1,10 +1,9 @@
-import { Link } from 'react-router-dom';
+import Header from '../components/Header';
 
 function Crew() {
   return (
-    <div>
-      <h1>Crew</h1>
-      <Link to='/'>Home</Link>
+    <div className='h-screen bg-cover bg-crewMobile md:bg-crewTablet lg:bg-crewDesktop'>
+      <Header />
     </div>
   );
 }

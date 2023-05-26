@@ -4,7 +4,7 @@ export default {
   theme: {
     colors: {
       black: '#0B0D17',
-      cyan: '#D0D6F9',
+      lightBlue: '#D0D6F9',
       white: '#FFFFFF',
     },
     extend: {
@@ -12,15 +12,15 @@ export default {
         homeDesktop: "url('/assets/home/background-home-desktop.jpg')",
         homeTablet: "url('/assets/home/background-home-tablet.jpg')",
         homeMobile: "url('/assets/home/background-home-mobile.jpg')",
-        destinationDesktop: "url('/assets/destination/background-home-desktop.jpg')",
-        destinationTablet: "url('/assets/destination/background-home-tablet.jpg')",
-        destinationMobile: "url('/assets/destination/background-home-mobile.jpg')",
-        crewDesktop: "url('/assets/crew/background-home-desktop.jpg')",
-        crewTablet: "url('/assets/crew/background-home-tablet.jpg')",
-        crewMobile: "url('/assets/crew/background-home-mobile.jpg')",
-        technologyDesktop: "url('/assets/technology/background-home-desktop.jpg')",
-        technologyTablet: "url('/assets/technology/background-home-tablet.jpg')",
-        technologyMobile: "url('/assets/technology/background-home-mobile.jpg')",
+        destinationDesktop: "url('/assets/destination/background-destination-desktop.jpg')",
+        destinationTablet: "url('/assets/destination/background-destination-tablet.jpg')",
+        destinationMobile: "url('/assets/destination/background-destination-mobile.jpg')",
+        crewDesktop: "url('/assets/crew/background-crew-desktop.jpg')",
+        crewTablet: "url('/assets/crew/background-crew-tablet.jpg')",
+        crewMobile: "url('/assets/crew/background-crew-mobile.jpg')",
+        technologyDesktop: "url('/assets/technology/background-technology-desktop.jpg')",
+        technologyTablet: "url('/assets/technology/background-technology-tablet.jpg')",
+        technologyMobile: "url('/assets/technology/background-technology-mobile.jpg')",
       },
       fontFamily: {
         barlow: ['Barlow Condensed', 'sans-serif'],
