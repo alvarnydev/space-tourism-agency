@@ -1,11 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
+import './base.css';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Home from './pages/home.tsx';
 import Destination from './pages/destination.tsx';
 import Technology from './pages/technology.tsx';
 import Crew from './pages/crew.tsx';
+import Layout from './layout.tsx';
 
 const router = createBrowserRouter([
   {
@@ -28,6 +29,8 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <Layout>
+      <RouterProvider router={router} />
+    </Layout>
   </React.StrictMode>
 );
