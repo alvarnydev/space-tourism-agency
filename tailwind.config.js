@@ -34,6 +34,14 @@ export default {
         28: '28px',
         16: '16px',
         14: '14px',
+        body: [
+          '18px',
+          {
+            lineHeight: '2rem',
+            // letterSpacing: '-0.01em',
+            fontWeight: '400',
+          },
+        ],
       },
       letterSpacing: {
         4.75: '4.75px',

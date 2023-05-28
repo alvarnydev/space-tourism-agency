@@ -5,7 +5,7 @@
 
 @layer base {
   html {
-    @apply font-barlow text-white;
+    @apply font-barlow text-white bg-black;
   }
 
   h1,
@@ -27,7 +27,11 @@
   }
 
   body {
-    @apply font-barlow text-lightBlue;
+    @apply font-barlow text-white;
+  }
+
+  p {
+    @apply text-body;
   }
 
   h1 {

@@ -13,19 +13,19 @@ const Navbar = () => {
   const currentPath = location.pathname;
 
   return (
-    <nav className='relative ml-12 py-9 flex nav-text'>
+    <nav className='relative ml-12 pt-10 flex nav-text'>
       <div className='flex-1 flex gap-14 items-center overflow-auto'>
         <img src='/assets/shared/logo.svg' />
-        <div className='absolute ml-24 h-[1px] w-2/5 z-10 bg-white/30' />
+        <div className='absolute ml-28 h-[1px] w-[35%] z-10 bg-white/25' />
       </div>
-      <ul className='flex items-center flex-1 gap-10 px-[6%] py-8 bg-white/5 backdrop-blur-xl'>
+      <ul className='flex items-center flex-1 gap-10 px-[9%] py-9 bg-white/5 backdrop-blur-xl'>
         {NavbarElements.map((element) => (
           <li key={element.id}>
             <Link
               to={`/${element.path}`}
               className={
-                'transition-[border] duration-75 py-8 hover:border-b-2 hover:-mb-0.5 border-white/40' +
-                (currentPath === `/${element.path}` ? 'border-white border-b-2 -mb-0.5' : '')
+                'transition-[border] duration-75 py-9 hover:border-b-[3px] hover:mb-[-3px] border-white/40' +
+                (currentPath === `/${element.path}` ? 'border-white border-b-[3px] mb-[-3px]' : '')
               }
             >
               <span className='font-bold'>{element.id}</span> {element.name}
