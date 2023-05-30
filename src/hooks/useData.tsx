@@ -1,6 +1,6 @@
 import { useQuery } from '@tanstack/react-query';
-import { LoadingPage } from '../components/loading';
-import { ErrorPage } from '../components/error';
+import { LoadingPage } from '../components/LoadingPage';
+import { ErrorPage } from '../components/ErrorPage';
 import { PageDataType } from '../types';
 
 const fetchPageData = async (): Promise<PageDataType> => {
