@@ -24,8 +24,10 @@ const Navbar = () => {
             <Link
               to={`/${element.path}`}
               className={
-                'transition-[border] duration-75 py-9 hover:border-b-[3px] hover:mb-[-3px] border-white/40' +
-                (currentPath === `/${element.path}` ? 'border-white border-b-[3px] mb-[-3px]' : '')
+                'transition-[border] duration-75 py-9 ' +
+                (currentPath === `/${element.path}`
+                  ? 'border-white border-b-[3px] mb-[-3px]'
+                  : 'hover:border-white/40 hover:border-b-[3px] hover:mb-[-3px] ')
               }
             >
               <span className='font-bold'>{element.id}</span> {element.name}
