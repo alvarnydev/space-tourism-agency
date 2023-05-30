@@ -6,7 +6,7 @@ function Home() {
   return (
     <div className='h-screen bg-cover bg-homeMobile md:bg-homeTablet lg:bg-homeDesktop'>
       <Header />
-      <main className='mx-[11.5%] mt-64 gap-[24%] flex justify-center items-end'>
+      <main className='main-layout mt-64'>
         <HeroText />
         <HeroButton />
       </main>

@@ -61,4 +61,7 @@
   .nav-text {
     @apply font-barlow text-16 tracking-2.7 uppercase;
   }
+  .main-layout {
+    @apply mx-[11.5%] gap-[24%] flex justify-center items-end;
+  }
 }
