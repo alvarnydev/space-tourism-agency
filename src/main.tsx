@@ -2,10 +2,10 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './global.css';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import Home from './pages/home.tsx';
-import Destination from './pages/destination.tsx';
-import Technology from './pages/technology.tsx';
-import Crew from './pages/crew.tsx';
+import HomePage from './pages/HomePage.tsx';
+import DestinationPage from './pages/DestinationPage.tsx';
+import TechnologyPage from './pages/TechnologyPage.tsx';
+import CrewPage from './pages/CrewPage.tsx';
 import Layout from './layout.tsx';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 
@@ -14,19 +14,19 @@ const queryClient = new QueryClient();
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <Home />,
+    element: <HomePage />,
   },
   {
     path: 'destination',
-    element: <Destination />,
+    element: <DestinationPage />,
   },
   {
     path: 'crew',
-    element: <Crew />,
+    element: <CrewPage />,
   },
   {
     path: 'technology',
-    element: <Technology />,
+    element: <TechnologyPage />,
   },
 ]);
 
