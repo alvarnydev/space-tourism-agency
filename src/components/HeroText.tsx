@@ -1,5 +1,5 @@
 const HeroText = () => (
-  <div className='flex-1 flex flex-col text-lightBlue tracking-[0.075em]'>
+  <div className='flex-1 flex flex-col text-lightBlue'>
     <h5>So, you want to travel to</h5>
     <h1>Space</h1>
     <p>

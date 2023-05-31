@@ -1,12 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './global.css';
-import {
-  Route,
-  createBrowserRouter,
-  RouterProvider,
-  createRoutesFromElements,
-} from 'react-router-dom';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import HomePage from './pages/HomePage.tsx';
 import DestinationPage from './pages/DestinationPage.tsx';
 import TechnologyPage from './pages/TechnologyPage.tsx';

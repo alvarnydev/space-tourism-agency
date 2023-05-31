@@ -6,7 +6,7 @@ function HomePage() {
   return (
     <div className='min-h-screen bg-cover bg-homeMobile md:bg-homeTablet lg:bg-homeDesktop'>
       <Header />
-      <main className='main-layout mt-[16%]'>
+      <main className='mx-[11.5%] gap-[24%] flex justify-center items-end mt-[16%]'>
         <HeroText />
         <HeroButton />
       </main>

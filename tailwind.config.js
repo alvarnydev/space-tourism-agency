@@ -23,7 +23,8 @@ export default {
         technologyMobile: "url('/assets/technology/background-technology-mobile.jpg')",
       },
       fontFamily: {
-        barlow: ['Barlow Condensed', 'sans-serif'],
+        barlow: ['Barlow', 'sans-serif'],
+        barlowCondensed: ['Barlow Condensed', 'sans-serif'],
         bellefair: ['Bellefair', 'serif'],
       },
       fontSize: {
@@ -38,7 +39,6 @@ export default {
           '18px',
           {
             lineHeight: '2rem',
-            // letterSpacing: '-0.01em',
             fontWeight: '400',
           },
         ],

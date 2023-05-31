@@ -22,10 +22,10 @@ const NavbarDestinations = ({
             <button
               onClick={() => setCurrentDestination(navElement.name)}
               className={
-                'transition-[border] nav-text py-3 ' +
+                'transition-[border] border-b-[3px]  text-lightBlue nav-text py-3 ' +
                 (currentDestination === navElement.name
-                  ? 'border-white border-b-[3px] mb-[-3px]'
-                  : 'hover:border-b-[3px] hover:mb-[-3px] hover:border-white/40')
+                  ? 'text-white border-white mb-[-3px]'
+                  : 'border-white/0 hover:mb-[-3px] hover:border-white/40')
               }
             >
               {navElement.name}
