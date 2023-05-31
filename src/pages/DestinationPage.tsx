@@ -1,8 +1,8 @@
 import Header from '../components/Header';
 import { useQuery } from '@tanstack/react-query';
 import { fetchPageData } from '../utils/fetching';
-import { LoadingPage } from '../components/LoadingPage';
-import { ErrorPage } from '../components/ErrorPage';
+import { LoadingPage } from './LoadingPage';
+import { ErrorPage } from './ErrorPage';
 import NavbarDestinations from '../components/NavbarDestinations';
 import { useState } from 'react';
 
