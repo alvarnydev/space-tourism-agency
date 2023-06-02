@@ -1,8 +1,9 @@
+import { useEffect } from 'react';
+
 import { preloadAssets } from '../utils/preload';
 import Header from '../components/Header';
 import HeroButton from '../components/HeroButton';
 import HeroText from '../components/HeroText';
-import { useEffect } from 'react';
 
 function HomePage() {
   useEffect(() => {

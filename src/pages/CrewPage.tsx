@@ -1,9 +1,10 @@
-import Header from '../components/Header';
+import { useEffect, useState } from 'react';
 import { useQuery } from '@tanstack/react-query';
+
+import Header from '../components/Header';
 import { fetchPageData } from '../utils/fetching';
 import { LoadingPage } from './LoadingPage';
 import { ErrorPage } from './ErrorPage';
-import { useEffect, useState } from 'react';
 import NavbarCrew from '../components/NavbarCrew';
 import { preloadAssets } from '../utils/preload';
 

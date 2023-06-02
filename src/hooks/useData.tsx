@@ -1,4 +1,5 @@
 import { useQuery } from '@tanstack/react-query';
+
 import { LoadingPage } from '../pages/LoadingPage';
 import { ErrorPage } from '../pages/ErrorPage';
 import { PageDataType } from '../types';

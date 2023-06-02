@@ -1,10 +1,11 @@
-import Header from '../components/Header';
 import { useQuery } from '@tanstack/react-query';
+import { useEffect, useState } from 'react';
+
+import Header from '../components/Header';
 import { fetchPageData } from '../utils/fetching';
 import { LoadingPage } from './LoadingPage';
 import { ErrorPage } from './ErrorPage';
 import NavbarDestinations from '../components/NavbarDestinations';
-import { useEffect, useState } from 'react';
 import { preloadAssets } from '../utils/preload';
 
 const DestinationPage = () => {
