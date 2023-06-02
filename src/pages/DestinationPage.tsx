@@ -16,11 +16,13 @@ const DestinationPage = () => {
   if (isLoading) return <LoadingPage />;
   if (error && error instanceof Error) return <ErrorPage errorMessage={error.message} />;
 
+  console.log(data);
+
   return (
-    <div className='h-screen relative'>
+    <div className='h-screen relative flex flex-col'>
       <div className='absolute opacity-30 brightness-200 -z-10 top-0 left-0 h-full w-full bg-cover bg-destinationMobile md:bg-destinationTablet lg:bg-destinationDesktop ' />
       <Header />
-      <main className='mt-[4%] z-10'>
+      <main className='mt-[4%] flex-1 mb-[8%]'>
         <h5 className='ml-[10%]'>
           <span className='text-white/25 font-bold mr-4'>01</span> Pick Your Destination
         </h5>

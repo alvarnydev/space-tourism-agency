@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
 
@@ -8,34 +9,84 @@ const NavbarElements = [
   { id: '03', path: 'technology', name: 'Technology' },
 ];
 
-const Navbar = () => {
+const DesktopNav: React.FC<{
+  currentPath: string;
+}> = ({ currentPath }) => (
+  <nav className='absolute md:static nav-text px-[6.5%] lg:px-[11%] bg-white/5 backdrop-blur-xl'>
+    <ul className='hidden min-w-fit py-9 md:flex gap-10 '>
+      {NavbarElements.map((element) => (
+        <li key={element.id}>
+          <Link
+            to={`/${element.path}`}
+            className={
+              'transition-[border] duration-75 py-9 whitespace-nowrap ' +
+              (currentPath === `/${element.path}`
+                ? 'border-white border-b-[3px] mb-[-3px]'
+                : 'hover:border-white/40 hover:border-b-[3px] hover:mb-[-3px] ')
+            }
+          >
+            <span className='font-bold mr-1 hidden lg:inline-block'>{element.id}</span>{' '}
+            {element.name}
+          </Link>
+        </li>
+      ))}
+    </ul>
+  </nav>
+);
+
+const NavToggler: React.FC<{
+  isMenuOpen: boolean;
+  setIsMenuOpen: React.Dispatch<React.SetStateAction<boolean>>;
+}> = ({ isMenuOpen, setIsMenuOpen }) => (
+  <div className='relative select-none md:hidden z-20'>
+    <input
+      className='peer hidden'
+      type='checkbox'
+      id='navi-toggle'
+      defaultChecked={isMenuOpen}
+      onChange={() => setIsMenuOpen(!isMenuOpen)}
+    />
+    <label className='z-20 cursor-pointer ' htmlFor='navi-toggle'>
+      {isMenuOpen ? (
+        <img width={28} height={28} src='/src/assets/shared/icon-close.svg' />
+      ) : (
+        <img width={28} height={28} src='/src/assets/shared/icon-hamburger.svg' />
+      )}
+    </label>
+  </div>
+);
+
+const NavMenu: React.FC<{
+  isOpen: boolean;
+}> = ({ isOpen }) => {
   const location = useLocation();
   const currentPath = location.pathname;
 
+  return isOpen ? <MobileNav /> : <DesktopNav currentPath={currentPath} />;
+};
+
+const MobileNav: React.FC = () => (
+  <nav className='transition-all duration-700 absolute right-0 top-0 h-screen bg-white/5 backdrop-blur-xl nav-text pl-10 pr-20 pt-[30%] min-w-[50%]'>
+    <ul className='flex flex-col gap-10'>
+      {NavbarElements.map((element) => (
+        <li key={element.id}>
+          <Link to={`/${element.path}`} className={'whitespace-nowrap '}>
+            <span className='font-bold mr-2'>{element.id}</span> {element.name}
+          </Link>
+        </li>
+      ))}
+    </ul>
+  </nav>
+);
+
+const Navbar = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   return (
-    <nav className='relative ml-12 pt-10 flex nav-text'>
-      <div className='flex-1 flex gap-14 items-center overflow-auto'>
-        <img src='/assets/shared/logo.svg' />
-        <div className='absolute ml-28 h-[1px] w-[35%] z-10 bg-white/25' />
-      </div>
-      <ul className='flex items-center flex-1 gap-10 px-[9%] py-9 bg-white/5 backdrop-blur-xl'>
-        {NavbarElements.map((element) => (
-          <li key={element.id}>
-            <Link
-              to={`/${element.path}`}
-              className={
-                'transition-[border] duration-75 py-9 ' +
-                (currentPath === `/${element.path}`
-                  ? 'border-white border-b-[3px] mb-[-3px]'
-                  : 'hover:border-white/40 hover:border-b-[3px] hover:mb-[-3px] ')
-              }
-            >
-              <span className='font-bold'>{element.id}</span> {element.name}
-            </Link>
-          </li>
-        ))}
-      </ul>
-    </nav>
+    <>
+      <NavToggler isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
+      <NavMenu isOpen={isMenuOpen} />
+    </>
   );
 };
 

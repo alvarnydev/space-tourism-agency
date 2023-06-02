@@ -18,7 +18,13 @@ export const ErrorBoundaryPage = () => {
     }
   }
 
-  return <ErrorPage errorMessage={'Something happened that made the site crash. Sorry! '} />;
+  return (
+    <ErrorPage
+      errorMessage={
+        "Something happened on our end that made the site crash, sorry! We're investigating... 🕵️‍♀️"
+      }
+    />
+  );
 };
 
 export default ErrorBoundaryPage;

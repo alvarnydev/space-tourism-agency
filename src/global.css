@@ -8,6 +8,10 @@
     @apply font-barlow text-white bg-black;
   }
 
+  main {
+    @apply m-auto w-[87.2%] md:w-[58.5%] lg:w-[77%];
+  }
+
   h1,
   h2,
   h3,
@@ -27,11 +31,11 @@
   }
 
   p {
-    @apply text-body;
+    @apply text-15 leading-[25px] md:text-16 md:leading-7 lg:text-18 lg:leading-8;
   }
 
   h1 {
-    @apply text-150;
+    @apply text-80 md:text-150 lg:text-150;
   }
   h2 {
     @apply text-100;
@@ -40,10 +44,10 @@
     @apply text-56;
   }
   h4 {
-    @apply text-32;
+    @apply text-20 md:text-32 lg:text-32;
   }
   h5 {
-    @apply text-28 tracking-4.75;
+    @apply tracking-0.168 text-16 md:text-20 lg:text-28;
   }
 }
 
@@ -52,9 +56,9 @@
     @apply font-bellefair text-28 uppercase;
   }
   .sub-heading-2 {
-    @apply font-barlowCondensed text-14 tracking-2.35 uppercase;
+    @apply font-barlowCondensed text-14 tracking-0.168 uppercase;
   }
   .nav-text {
-    @apply font-barlowCondensed text-16 tracking-2.7 uppercase;
+    @apply font-barlowCondensed uppercase tracking-0.168 text-16 md:text-14 lg:text-16;
   }
 }

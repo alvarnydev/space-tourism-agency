@@ -17,7 +17,7 @@ const CrewPage = () => {
   return error && error instanceof Error ? (
     <ErrorPage errorMessage={error.message} />
   ) : (
-    <div className='h-screen bg-cover bg-crewMobile md:bg-crewTablet lg:bg-crewDesktop'>
+    <div className='absolute right-0 top-0 h-screen bg-cover bg-crewMobile md:bg-crewTablet lg:bg-crewDesktop'>
       <Header />
       <main className='main-layout mt-32'>
         {data?.crew
