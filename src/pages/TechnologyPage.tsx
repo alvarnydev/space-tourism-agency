@@ -3,8 +3,9 @@ import { useQuery } from '@tanstack/react-query';
 import { fetchPageData } from '../utils/fetching';
 import { LoadingPage } from './LoadingPage';
 import { ErrorPage } from './ErrorPage';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import NavbarTechnology from '../components/NavbarTechnology';
+import { preloadAssets } from '../utils/preload';
 
 const TechnologyPage = () => {
   const [currentTechnology, setCurrentTechnology] = useState('Launch vehicle');
@@ -12,6 +13,10 @@ const TechnologyPage = () => {
     queryKey: ['crew'],
     queryFn: fetchPageData,
   });
+
+  useEffect(() => {
+    preloadAssets('technology');
+  }, []);
 
   if (isLoading) return <LoadingPage />;
   if (error && error instanceof Error) return <ErrorPage errorMessage={error.message} />;

@@ -3,8 +3,9 @@ import { useQuery } from '@tanstack/react-query';
 import { fetchPageData } from '../utils/fetching';
 import { LoadingPage } from './LoadingPage';
 import { ErrorPage } from './ErrorPage';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import NavbarCrew from '../components/NavbarCrew';
+import { preloadAssets } from '../utils/preload';
 
 const CrewPage = () => {
   const [currentCrew, setCurrentCrew] = useState('Douglas Hurley');
@@ -13,10 +14,14 @@ const CrewPage = () => {
     queryFn: fetchPageData,
   });
 
+  useEffect(() => {
+    preloadAssets('crew');
+  }, []);
+
   if (isLoading) return <LoadingPage />;
-  return error && error instanceof Error ? (
-    <ErrorPage errorMessage={error.message} />
-  ) : (
+  if (error && error instanceof Error) return <ErrorPage errorMessage={error.message} />;
+
+  return (
     <div className='absolute right-0 top-0 h-screen bg-cover bg-crewMobile md:bg-crewTablet lg:bg-crewDesktop'>
       <Header />
       <main className='main-layout mt-32'>

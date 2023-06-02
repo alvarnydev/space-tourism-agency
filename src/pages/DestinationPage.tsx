@@ -4,7 +4,8 @@ import { fetchPageData } from '../utils/fetching';
 import { LoadingPage } from './LoadingPage';
 import { ErrorPage } from './ErrorPage';
 import NavbarDestinations from '../components/NavbarDestinations';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import { preloadAssets } from '../utils/preload';
 
 const DestinationPage = () => {
   const [currentDestination, setCurrentDestination] = useState('Moon');
@@ -13,10 +14,12 @@ const DestinationPage = () => {
     queryFn: fetchPageData,
   });
 
+  useEffect(() => {
+    preloadAssets('home');
+  }, []);
+
   if (isLoading) return <LoadingPage />;
   if (error && error instanceof Error) return <ErrorPage errorMessage={error.message} />;
-
-  console.log(data);
 
   return (
     <div className='h-screen relative flex flex-col'>
