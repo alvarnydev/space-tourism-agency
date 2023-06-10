@@ -2,6 +2,9 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
 
+import menuCloseUrl from '../assets/shared/icon-close.svg';
+import menuOpenUrl from '../assets/shared/icon-hamburger.svg';
+
 const NavbarElements = [
   { id: '00', path: '', name: 'Home' },
   { id: '01', path: 'destination', name: 'Destination' },
@@ -48,9 +51,9 @@ const NavToggler: React.FC<{
     />
     <label className='z-20 cursor-pointer ' htmlFor='navi-toggle'>
       {isMenuOpen ? (
-        <img width={28} height={28} src='/src/assets/shared/icon-close.svg' />
+        <img width={28} height={28} src={menuCloseUrl} />
       ) : (
-        <img width={28} height={28} src='/src/assets/shared/icon-hamburger.svg' />
+        <img width={28} height={28} src={menuOpenUrl} />
       )}
     </label>
   </div>
