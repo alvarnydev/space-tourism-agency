@@ -16,7 +16,7 @@ const DestinationPage = () => {
   });
 
   useEffect(() => {
-    preloadAssets('home');
+    preloadAssets('destination');
   }, []);
 
   if (isLoading) return <LoadingPage />;
