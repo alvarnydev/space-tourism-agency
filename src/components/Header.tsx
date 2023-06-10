@@ -1,8 +1,9 @@
 import Navbar from './Navbar';
+import logoUrl from '../assets/shared/logo.svg';
 
 const HeaderLogo: React.FC = () => (
   <div className='flex gap-14 items-center'>
-    <img className='w-10 h-10 md:w-12 md:h-12' src='/src/assets/shared/logo.svg' />
+    <img className='w-10 h-10 md:w-12 md:h-12' src={logoUrl} />
     <div className='absolute ml-28 h-[1px] xl:w-[35%] z-10 bg-white/25' />
   </div>
 );
