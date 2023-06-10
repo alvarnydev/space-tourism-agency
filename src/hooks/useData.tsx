@@ -5,7 +5,7 @@ import { ErrorPage } from '../pages/ErrorPage';
 import { PageDataType } from '../types';
 
 const fetchPageData = async (): Promise<PageDataType> => {
-  const response = await fetch(`/data/data.json`).then((res) => res.json());
+  const response = await fetch(`@/data.json`).then((res) => res.json());
   return response.data;
 };
 
