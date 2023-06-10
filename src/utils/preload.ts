@@ -1,21 +1,21 @@
 export function preloadAssets(page: string) {
-  import.meta.glob('../assets/shared/*');
-  console.log('shared assets preloaded');
+  const assetUrls: string[] = Object.keys(import.meta.glob('/src/assets/shared/*'));
 
   if (page === 'home') {
-    import.meta.glob('../assets/home/*');
-    console.log('home assets preloaded');
+    assetUrls.push(...Object.keys(import.meta.glob('/src/assets/home/*')));
   }
   if (page === 'crew') {
-    import.meta.glob('../assets/crew/*');
-    console.log('crew assets preloaded');
+    assetUrls.push(...Object.keys(import.meta.glob('/src/assets/crew/*')));
   }
   if (page === 'destination') {
-    import.meta.glob('../assets/destination/*');
-    console.log('destination assets preloaded');
+    assetUrls.push(...Object.keys(import.meta.glob('/src/assets/destination/*')));
   }
   if (page === 'technology') {
-    import.meta.glob('../assets/technology/*');
-    console.log('technology assets preloaded');
+    assetUrls.push(...Object.keys(import.meta.glob('/src/assets/technology/*')));
   }
+
+  assetUrls.forEach((assetUrl) => {
+    new Image().src = assetUrl;
+    console.log('Preloaded asset: ', assetUrl);
+  });
 }
