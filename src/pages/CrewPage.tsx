@@ -39,7 +39,7 @@ const CrewPage = () => {
                   <NavbarCrew currentCrew={currentCrew} setCurrentCrew={setCurrentCrew} />
                 </div>
                 <div>
-                  <img src={crew.images.webp} alt={crew.name} />
+                  <img src={new URL(crew.images.webp, import.meta.url).href} alt={crew.name} />
                 </div>
               </>
             );

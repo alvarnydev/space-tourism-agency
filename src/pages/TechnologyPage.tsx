@@ -40,7 +40,7 @@ const TechnologyPage = () => {
                   <p>{tech.description}</p>
                 </div>
                 <div>
-                  <img src={tech.images.portrait} alt={tech.name} />
+                  <img src={new URL(tech.images.portrait, import.meta.url).href} alt={tech.name} />
                 </div>
               </>
             );

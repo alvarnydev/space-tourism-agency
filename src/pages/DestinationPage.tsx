@@ -37,7 +37,11 @@ const DestinationPage = () => {
               return (
                 <>
                   <div className='flex-1'>
-                    <img className='w-auto' src={destination.images.webp} alt={destination.name} />
+                    <img
+                      className='w-auto'
+                      src={new URL(destination.images.webp, import.meta.url).href}
+                      alt={destination.name}
+                    />
                   </div>
                   <div className='flex-1 flex flex-col gap-1'>
                     <NavbarDestinations
