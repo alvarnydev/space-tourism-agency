@@ -23,7 +23,7 @@ const CrewPage = () => {
   if (error && error instanceof Error) return <ErrorPage errorMessage={error.message} />;
 
   return (
-    <div className='absolute right-0 top-0 h-screen bg-cover bg-crewMobile md:bg-crewTablet lg:bg-crewDesktop'>
+    <div className='absolute right-0 top-0 min-h-screen bg-cover bg-crewMobile md:bg-crewTablet lg:bg-crewDesktop'>
       <Header />
       <main className='main-layout mt-32'>
         {data?.crew

@@ -23,7 +23,7 @@ const TechnologyPage = () => {
   if (error && error instanceof Error) return <ErrorPage errorMessage={error.message} />;
 
   return (
-    <div className='h-screen bg-cover bg-technologyMobile md:bg-technologyTablet lg:bg-technologyDesktop'>
+    <div className='min-h-screen bg-cover bg-technologyMobile md:bg-technologyTablet lg:bg-technologyDesktop'>
       <Header />
       <main className='main-layout mt-32'>
         {data?.technology

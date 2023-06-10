@@ -23,7 +23,7 @@ const DestinationPage = () => {
   if (error && error instanceof Error) return <ErrorPage errorMessage={error.message} />;
 
   return (
-    <div className='h-screen relative flex flex-col'>
+    <div className='min-h-screen relative flex flex-col'>
       <div className='absolute opacity-30 brightness-200 -z-10 top-0 left-0 h-full w-full bg-cover bg-destinationMobile md:bg-destinationTablet lg:bg-destinationDesktop ' />
       <Header />
       <main className='mt-[4%] flex-1 mb-[8%]'>
